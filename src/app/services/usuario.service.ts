@@ -43,18 +43,6 @@ export class UsuarioService {
     this.router.navigate(['login']);
   }
 
-  // get obterUsuarioLogado(): IUsuario {
-  //   return localStorage.getItem('usuario')
-  //     ? JSON.parse(atob(localStorage.getItem('usuario')))
-  //     : null;
-  // }
-
-  // get obterTokenUsuario(): string {
-  //   return localStorage.getItem('token')
-  //     ? JSON.parse(atob(localStorage.getItem('token')))
-  //     : null;
-  // }
-
   get logado(): boolean {
     return localStorage.getItem('token') ? true : false;
   }

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { UsuarioService } from '../services/usuario.service';
 
 @Component({
   selector: 'app-principal',
@@ -7,4 +8,11 @@ import { Component } from '@angular/core';
 })
 export class PrincipalComponent {
 
+  constructor(private _usuarioService: UsuarioService) {
+
+  }
+
+  deslogar(): void {
+    this._usuarioService.deslogar();
+  }
 }
