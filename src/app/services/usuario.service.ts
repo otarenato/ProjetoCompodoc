@@ -21,6 +21,7 @@ export class UsuarioService {
         if(!resposta.sucesso) return;
         localStorage.setItem('token', btoa(JSON.stringify("TokenQueSeriaGeradoPelaAPI")));
         localStorage.setItem('usuario', btoa(JSON.stringify(usuario)));
+        localStorage.setItem('tema', resposta.tema);
         this.router.navigate(['']);
       }));
   }
@@ -31,6 +32,13 @@ export class UsuarioService {
       retornoMock.sucesso = true;
       retornoMock.usuario = usuario;
       retornoMock.token = "TokenQueSeriaGeradoPelaAPI";
+      retornoMock.tema = "tema1";
+      return of(retornoMock);
+    } else if(usuario.email === "teste2@teste.com" && usuario.senha == "123"){
+      retornoMock.sucesso = true;
+      retornoMock.usuario = usuario;
+      retornoMock.token = "TokenQueSeriaGeradoPelaAPI";
+      retornoMock.tema = "tema2";
       return of(retornoMock);
     }
     retornoMock.sucesso = false;

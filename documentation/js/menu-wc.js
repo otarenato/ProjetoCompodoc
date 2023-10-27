@@ -59,13 +59,13 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                                 <a href="modules/AppModule.html" data-type="entity-link" >AppModule</a>
                                     <li class="chapter inner">
                                         <div class="simple menu-toggler" data-bs-toggle="collapse" ${ isNormalMode ?
-                                            'data-bs-target="#components-links-module-AppModule-389e1f5e4bd87aac3367279748eae2bd700bde90f722c8c6127429e000938bc03ac749c1280ce62a62bd01ad9ac5d801f46784b2d5e3e62fda003c9234ebf6a3"' : 'data-bs-target="#xs-components-links-module-AppModule-389e1f5e4bd87aac3367279748eae2bd700bde90f722c8c6127429e000938bc03ac749c1280ce62a62bd01ad9ac5d801f46784b2d5e3e62fda003c9234ebf6a3"' }>
+                                            'data-bs-target="#components-links-module-AppModule-29fc77aee516e25718aac5376c219c68298ba5371a504d2f5603929abcbbf2691b46a60f49888eb1c15914e2f4f271ced184c88cc5ab2541d3c4962ff7432b97"' : 'data-bs-target="#xs-components-links-module-AppModule-29fc77aee516e25718aac5376c219c68298ba5371a504d2f5603929abcbbf2691b46a60f49888eb1c15914e2f4f271ced184c88cc5ab2541d3c4962ff7432b97"' }>
                                             <span class="icon ion-md-cog"></span>
                                             <span>Components</span>
                                             <span class="icon ion-ios-arrow-down"></span>
                                         </div>
-                                        <ul class="links collapse" ${ isNormalMode ? 'id="components-links-module-AppModule-389e1f5e4bd87aac3367279748eae2bd700bde90f722c8c6127429e000938bc03ac749c1280ce62a62bd01ad9ac5d801f46784b2d5e3e62fda003c9234ebf6a3"' :
-                                            'id="xs-components-links-module-AppModule-389e1f5e4bd87aac3367279748eae2bd700bde90f722c8c6127429e000938bc03ac749c1280ce62a62bd01ad9ac5d801f46784b2d5e3e62fda003c9234ebf6a3"' }>
+                                        <ul class="links collapse" ${ isNormalMode ? 'id="components-links-module-AppModule-29fc77aee516e25718aac5376c219c68298ba5371a504d2f5603929abcbbf2691b46a60f49888eb1c15914e2f4f271ced184c88cc5ab2541d3c4962ff7432b97"' :
+                                            'id="xs-components-links-module-AppModule-29fc77aee516e25718aac5376c219c68298ba5371a504d2f5603929abcbbf2691b46a60f49888eb1c15914e2f4f271ced184c88cc5ab2541d3c4962ff7432b97"' }>
                                             <li class="link">
                                                 <a href="components/AppComponent.html" data-type="entity-link" data-context="sub-entity" data-context-id="modules" >AppComponent</a>
                                             </li>
@@ -81,6 +81,9 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                                             <li class="link">
                                                 <a href="components/PaginaUmComponent.html" data-type="entity-link" data-context="sub-entity" data-context-id="modules" >PaginaUmComponent</a>
                                             </li>
+                                            <li class="link">
+                                                <a href="components/PrincipalComponent.html" data-type="entity-link" data-context="sub-entity" data-context-id="modules" >PrincipalComponent</a>
+                                            </li>
                                         </ul>
                                     </li>
                             </li>
@@ -89,6 +92,48 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                             </li>
                 </ul>
                 </li>
+                        <li class="chapter">
+                            <div class="simple menu-toggler" data-bs-toggle="collapse" ${ isNormalMode ? 'data-bs-target="#injectables-links"' :
+                                'data-bs-target="#xs-injectables-links"' }>
+                                <span class="icon ion-md-arrow-round-down"></span>
+                                <span>Injectables</span>
+                                <span class="icon ion-ios-arrow-down"></span>
+                            </div>
+                            <ul class="links collapse " ${ isNormalMode ? 'id="injectables-links"' : 'id="xs-injectables-links"' }>
+                                <li class="link">
+                                    <a href="injectables/AdminGuard.html" data-type="entity-link" >AdminGuard</a>
+                                </li>
+                                <li class="link">
+                                    <a href="injectables/UsuarioService.html" data-type="entity-link" >UsuarioService</a>
+                                </li>
+                            </ul>
+                        </li>
+                    <li class="chapter">
+                        <div class="simple menu-toggler" data-bs-toggle="collapse" ${ isNormalMode ? 'data-bs-target="#interfaces-links"' :
+                            'data-bs-target="#xs-interfaces-links"' }>
+                            <span class="icon ion-md-information-circle-outline"></span>
+                            <span>Interfaces</span>
+                            <span class="icon ion-ios-arrow-down"></span>
+                        </div>
+                        <ul class="links collapse " ${ isNormalMode ? ' id="interfaces-links"' : 'id="xs-interfaces-links"' }>
+                            <li class="link">
+                                <a href="interfaces/IUsuario.html" data-type="entity-link" >IUsuario</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="chapter">
+                        <div class="simple menu-toggler" data-bs-toggle="collapse" ${ isNormalMode ? 'data-bs-target="#miscellaneous-links"'
+                            : 'data-bs-target="#xs-miscellaneous-links"' }>
+                            <span class="icon ion-ios-cube"></span>
+                            <span>Miscellaneous</span>
+                            <span class="icon ion-ios-arrow-down"></span>
+                        </div>
+                        <ul class="links collapse " ${ isNormalMode ? 'id="miscellaneous-links"' : 'id="xs-miscellaneous-links"' }>
+                            <li class="link">
+                                <a href="miscellaneous/variables.html" data-type="entity-link">Variables</a>
+                            </li>
+                        </ul>
+                    </li>
                         <li class="chapter">
                             <a data-type="chapter-link" href="routes.html"><span class="icon ion-ios-git-branch"></span>Routes</a>
                         </li>

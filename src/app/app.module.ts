@@ -19,9 +19,15 @@ import { PaginaUmComponent } from './pagina-um/pagina-um.component';
 import { PaginaDoisComponent } from './pagina-dois/pagina-dois.component';
 import { LoginComponent } from './login/login.component';
 import { PrincipalComponent } from './principal/principal.component';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
-import { isAdminGuard } from './services/guards/is-admin.guard';
+import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
+import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+
+export function HttpLoaderFactory(http: HttpClient) {
+  return new TranslateHttpLoader(http, './assets/i18n/', '.json');
+}
+
 
 @NgModule({
   declarations: [
@@ -48,7 +54,14 @@ import { isAdminGuard } from './services/guards/is-admin.guard';
     MatSidenavModule,
     MatListModule,
     MatGridListModule,
-    MatCardModule
+    MatCardModule,
+    TranslateModule.forRoot({
+      loader: {
+        provide: TranslateLoader,
+        useFactory: HttpLoaderFactory,
+        deps: [HttpClient]
+      }
+    })
   ],
   exports: [
     BrowserAnimationsModule,
